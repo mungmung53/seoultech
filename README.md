@@ -1,6 +1,40 @@
-# seoultech
+# MNIST Classification Project
 
-# MNIST Classification 프로젝트
+Overview
+This project aims to build a classification model using the MNIST dataset to recognize handwritten digits. The MNIST dataset is a large database of handwritten digits that is commonly used for training various image processing systems. The project utilizes neural network models to learn from the dataset and predict the digit presented in an image.
+
+Usage
+Dataset Download and Preprocessing
+Download the dataset and extract it.
+Use the dataset.py file to load and preprocess the dataset.
+Model Selection and Training
+Select the LeNet-5 or custom MLP model from the model.py file.
+Use the main.py file to train and evaluate the model.
+Project Execution
+Run the main.py file to execute the project.
+Statistical Graphs Creation
+The training process of the models is evaluated by visualizing the average loss values and accuracy for both the training and testing datasets.
+
+
+The graphs show that the LeNet-5 model's training loss decreases progressively, while the test loss shows some volatility over epochs. In terms of accuracy, the training accuracy continues to improve, reducing the gap with the test accuracy. This indicates a robust learning process, albeit with room for improvement in model generalization on unseen data.
+
+![LeNet Loss over Epochs](https://github.com/mungmung53/seoultech/assets/161430566/c89502af-833c-4c78-893d-816c671383f2)
+
+Model Performance Comparison
+The LeNet-5 model consistently shows lower loss values and achieves higher accuracy compared to the custom MLP model. The LeNet-5 model reaches an accuracy of approximately 89% on the test dataset, similar to known benchmarks. The custom MLP model has a slightly lower test accuracy of about 85%. This suggests that LeNet-5 has a more suitable architecture for image recognition tasks within this context.
+
+Applying Regularization Techniques
+To improve the LeNet-5 model's performance, regularization techniques such as dropout and data augmentation were applied. Dropout helped prevent overfitting and improve the model's generalization capabilities. Data augmentation, primarily applied to the training data, allowed the model to learn from a more varied dataset. The application of these techniques led to a performance enhancement, with the test dataset accuracy improving by approximately 3%. This underlines the effectiveness of regularization techniques in model performance optimization.
+
+Prerequisites
+Python 3.x
+PyTorch
+OpenCV
+Additional libraries listed in requirements.txt
+Contact Information
+For any questions or suggestions, please send an email to: shinhyelee0503@gmail.com
+
+_
 
 이 프로젝트는 MNIST 데이터셋을 사용하여 손으로 쓴 숫자를 인식하는 분류 모델을 구축하는 것을 목표로 합니다.
 
@@ -23,6 +57,9 @@
 - 정확도 면에서는 학습 정확도가 지속적으로 향상되어 테스트 정확도와의 격차가 줄어드는 추세를 나타냈습니다.
 - 사용자 정의 MLP 모델은 학습 손실이 LeNet-5보다 다소 높게 유지되었으나, 정확도는 비슷한 수준으로 나타났습니다.
 - 이러한 결과는 두 모델의 학습 곡선을 통해 명확히 확인할 수 있습니다.
+
+![LeNet Loss over Epochs](https://github.com/mungmung53/seoultech/assets/161430566/c89502af-833c-4c78-893d-816c671383f2)
+
 
 5. 모델 성능 비교
 - LeNet-5 모델과 사용자 정의 MLP 모델의 성능을 비교한 결과, LeNet-5가 일관되게 더 낮은 손실값을 보이며 높은 정확도를 달성했습니다.
